@@ -5,12 +5,14 @@ $(document).ready(()=>{
         if(response.gender == "male"){
         $("#gender").text(response.gender+ "♂")
         }
-        else if(response.gender == "female"){
+        else {
+           if(response.gender == "female"){
             $("#gender").text(response.gender+ "♀")
+            }
+            else{
+            $("#gender").text(response.gender)
+             }
         }
-       else{
-          $("#gender").text(response.gender)
-       }
           
     })
    }
